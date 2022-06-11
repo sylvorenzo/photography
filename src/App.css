@@ -1,38 +1,436 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Megrim&family=Raleway:ital,wght@1,500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* ****************Nav styling**************************************************** */
+nav.wideScreen {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: black;
+  width: 100%;
+  height: 5rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+img.logo {
+  margin: 0.5rem;
+  width: 5%;
+  border-radius: 0.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+nav.wideScreen ul {
+  display: flex;
+  list-style: none;
+  padding-top: 2rem;
+  margin-left: 40%;
+}
+
+nav ul li {
+  margin-left: 3rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #39ff14;
+}
+nav.smallScreen{
+  display: none;
+}
+
+/* ***********************End Nav Styling *********************************************** */
+
+/* ***********************Banner Section********************************************** */
+section.banner {
+  height: 15rem;
+  background-image: url(./assets/banner.jpg);
+  background-size: cover;
+}
+
+section.banner h1 {
+  margin-top: 3rem;
+  margin-left: 10%;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+section.banner h6 {
+  margin-top: 0.5rem;
+  color: white;
+  margin-left: 10%;
+  font-weight: bold;
+}
+
+section.banner h3 {
+  display: inline-block;
+  border-bottom: 2px solid white;
+  padding-bottom: 0.5rem;
+  color: white;
+  margin-left: 70%;
+  margin-top: 5%;
+}
+
+section.banner a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+section.banner h3 a:hover {
+  color: #39ff14;
+}
+
+/* **************************End of Banner **************************** */
+
+/* ******************************About section****************************** */
+section.about {
+  background-color: #EE833B;
+  text-align: center;
+  padding: 2rem;
+  min-height: 20rem;
+  color: white;
+}
+section.about h2{
+  font-family: 'Raleway', cursive;
+}
+
+section.divider {
+  display: inline-block;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #39ff14;
+  padding-bottom: 2rem;
+}
+
+section.content {
+  display: inline-block;
+
+}
+
+/* *******************************End About Section******************************** */
+
+/* ********************************Page Break Section***************************** */
+section.breaker {
+  display: flex;
+
+}
+
+section.areas {
+  background-color: black;
+  color: white;
+  width: 50%;
+  text-align: left;
+  padding: 3rem;
+}
+
+section.areas h4 {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
+section.areas ul {
+  text-align: left;
+  display: inline-block;
+  border-top: 2px solid #39ff14;
+  padding-top: 1rem;
+
+}
+
+img.wedding {
+  width: 50%;
+}
+
+li.portfolioBtn {
+  list-style: none;
+  margin-top: 20%;
+  width: 6rem;
+  padding: 1rem;
+  border: 1px solid #39ff14;
+  background-color: #39ff14;
+  text-align: center;
+  color: white;
+  border-radius: 0.4rem;
+  margin-left: 70%;
+
+}
+
+li.portfolioBtn a {
+  padding-top: 3rem;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+
+/* ***********************************************End Breaker*************************** */
+
+/* ************************************Portfolio Section******************************** */
+section.portfolio {
+  display: flex;
+  color: white;
+}
+
+section.wedding {
+  width: 100%;
+  background-image: url(./assets/wedding1.jpg);
+  background-size: cover;
+  padding: 1rem;
+}
+
+section.wedding li,
+section.graduation li,
+section.corporate li {
+  margin-top: 95%;
+  margin-left: 60%;
+  padding: 0.5rem;
+}
+
+section.graduation {
+  width: 100%;
+  background-image: url(./assets/graduation.jpg);
+  background-size: cover;
+  padding: 1rem;
+}
+
+section.corporate {
+  width: 100%;
+  background-image: url(./assets/corporate.jpg);
+  background-size: cover;
+  padding: 1rem;
+}
+
+/* ************************************************End Portfolio Section************************** */
+
+/* ************************************************Contact Section*************************** */
+section.contact {
+  display: flex;
+  min-height: 30rem;
+  background-color: #F5D0C9;
+
+}
+
+section.form {
+  width: 50%;
+  padding: 3rem;
+
+}
+
+section.form form {
+  background-color: white;
+  width: 60%;
+  margin-left: 10%;
+  padding: 2rem;
+  border-radius: 0.4rem;
+  box-shadow: 3px 3px 5px white;
+}
+
+section.form form input.textInput {
+  margin: 1rem;
+  padding: 0.4rem;
+  width: 80%;
+  border: 1px solid black;
+  border-radius: 1rem;
+  outline: none;
+}
+
+textarea {
+  margin: 1rem;
+  width: 84%;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  height: 5rem;
+}
+
+button {
+  background-color: #04d5d9;
+  border: 1px solid #04d5d9;
+  margin-left: 60%;
+  border-radius: 0.4rem;
+  width: 6rem;
+  height: 2rem;
+  color: white;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #39ff14;
+  border: 1px solid #39ff14;
+}
+
+section.details {
+  margin-top: 3rem;
+  border-left: 3px solid #04d5d9;
+  height: 20rem;
+  padding: 3rem;
+}
+
+section.details h6 {
+  font-size: 1rem;
+  margin-top: 2rem;
+  color: white;
+}
+
+section.socialMedia {
+  width: 80%;
+  margin-top: 5rem;
+}
+
+section.socialMedia ul {
+  display: flex;
+  list-style: none;
+}
+
+a img.socialFacebook {
+  width: 5rem;
+  box-shadow: 1px 3px 5px white;
+  margin: 1rem;
+  border-radius: 5rem;
+  background-color: black;
+}
+
+a img.socialInstagram {
+  width: 5rem;
+  margin: 1rem;
+  box-shadow: 1px 3px 5px white;
+  border-radius: 5rem;
+  background-color: black;
+}
+
+/* *********************************************End Contact************************************ */
+
+/* **********************************************footer************************************* */
+footer {
+  background-color: black;
+  color: white;
+  height: 3rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+footer h5 {
+  margin-top: 1rem;
+}
+/* ***************************************************End Footer**************************** */
+
+/* *******************************************Responsive Design**************************** */
+@media only screen and (max-device-width:480px){
+
+  /* ************************************************Nav Section************************ */
+  nav.wideScreen{
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  nav.smallScreen{
+    display: block;
+    visibility: visible;
+    min-height: 5rem;
+    background-color: black;
+    width: 100%;
+  }
+  nav.smallScreen div ul li{
+    margin-left: 0.5rem;
+  }
+  nav.smallScreen section{
+    display: flex;
+  }
+  nav.smallScreen img.logo{
+    width: 20%;
+  }
+  nav.smallScreen button{
+    margin: 1rem;
+    margin-left:60%;
+    background-color: white;
+    border: 1px solid white;
+    outline: none;
+  }
+  nav.smallScreen div ul{
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    list-style: none;
+  }
+  nav.smallScreen div.optionHidden{
+    visibility: none;
+    display: none;
+  }
+  nav.smallScreen div.optionDisplay{
+    visibility: visible;
+  }
+  /* ***************************************************End Nav Section***************** */
+
+  /* **********************************Section Breaker********************************* */
+  section.breaker{
+    display: block;
+    background-color: black;
+  }
+  section.breaker img.wedding{
+    width: 100%;
+  }
+  section.areas{
+    margin-top: -1rem;
+    padding: 1rem;
+    width: 91%;
+  }
+  section.areas h4{
+    width: 80%;
+  }
+  li.portfolioBtn{
+    margin-left: 60%;
+  }
+  /* ***********************************End Section Breaker********************** */
+
+  /* ************************************Portfolio Section************************ */
+  section.portfolio{
+    display: block;
+  }
+  section.wedding, section.graduation, section.corporate{
+    height: 30rem;
+    padding-top: 50%;
+    width: 95%;
+  }
+/* ******************************************End Portfolio Section*************** */
+
+/* *****************************************Contact Section*********************** */
+section.contact{
+  display: inline-block;
+  background-color: #3B4F74;
+  width: 100%;
+}
+section.form{
+  background-color: #3B4F74;
+  width: 80%;
+  padding: 1rem;
+}
+section.details{
+  background-color: #04d5d9;
+}
+}
+
+@media screen and (max-width:768px) {
+  /* **************************************portfolio section *********************** */
+
+  nav.wideScreen ul{
+    margin-left: 30%;
+  }
+  nav.wideScreen img.logo{
+    width: 10%;
+  }
+  section.portfolio li.portfolioBtn{
+  
+    margin-left: 50%;
+  }
+  section.portfolio section{
+    padding: 0.5rem;
   }
 }
