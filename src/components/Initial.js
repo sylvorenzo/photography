@@ -5,6 +5,7 @@ import facebook from '../assets/facebook.svg';
 import instagram from '../assets/instagram.svg';
 import burgerMenu from '../assets/icons8-menu.svg'
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function InitialComponent(){
 
@@ -15,11 +16,11 @@ export default function InitialComponent(){
 
         if(controller === false){
             setNavController('optionDisplay');
-            console.log(controller);
+          
         }
         if(controller === true){
             setNavController('optionHidden');
-            console.log(controller);
+          
         }
     }
     return(
@@ -121,17 +122,17 @@ export default function InitialComponent(){
       <section id="portfolio" className="portfolio">
         <section className="wedding">
         <li className="portfolioBtn">
-            <a href="#portfolio">Portfolio</a>
+            <Link to="/wedding">Portfolio</Link>
           </li>
         </section>
         <section className="graduation">
           <li className="portfolioBtn">
-            <a href="#portfolio">Portfolio</a>
+            <Link to="/graduation">Portfolio</Link>
           </li>
         </section>
         <section className="corporate">
           <li className="portfolioBtn">
-            <a href="#portfolio">Portfolio</a>
+            <Link to="/events">Portfolio</Link>
           </li>
         </section>
       </section>
