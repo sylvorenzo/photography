@@ -68,19 +68,19 @@ export default function Events(){
                 
                     <div>
                         <img src={event2} />
-                        <p className="legend">Legend 2</p>
+                        
                     </div>
                     <div>
                         <img src={event3} />
-                        <p className="legend">Legend 3</p>
+                        
                     </div>
                     <div>
                         <img src={event4} />
-                        <p className="legend">Legend 4</p>
+            
                     </div>
                     <div>
                         <img src={event5} />
-                        <p className="legend">Legend 5</p>
+                        
                     </div>
                     
                 </Carousel>

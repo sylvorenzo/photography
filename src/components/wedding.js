@@ -65,15 +65,15 @@ export default function Wedding(){
             <Carousel autoPlay={true} showArrows={true} showThumbs={false} showIndicators={true} >
                 <div>
                     <img src={wedding0} />
-                    <p className="legend">Legend 1</p>
+                   
                 </div>
                 <div>
                     <img src={wedding1} />
-                    <p className="legend">Legend 2</p>
+                    
                 </div>
                 <div>
                     <img src={wedding2} />
-                    <p className="legend">Legend 3</p>
+                    
                 </div>
             </Carousel>
         </section>

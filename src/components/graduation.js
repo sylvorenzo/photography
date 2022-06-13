@@ -65,15 +65,15 @@ export default function Graduation(){
             <Carousel autoPlay={true} showArrows={true} showThumbs={false} showIndicators={true} dynamicHeight={true}>
                 <div>
                     <img src={graduation1} />
-                    <p className="legend">Legend 1</p>
+                    
                 </div>
                 <div>
                     <img src={graduation2} />
-                    <p className="legend">Legend 2</p>
+                    
                 </div>
                 <div>
                     <img src={graduation3} />
-                    <p className="legend">Legend 3</p>
+                   
                 </div>
             </Carousel>
         </section>

@@ -7,24 +7,24 @@ import burgerMenu from '../assets/icons8-menu.svg'
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-export default function InitialComponent(){
+export default function InitialComponent() {
 
-    const [navController, setNavController] = useState('optionHidden');
-    const [controller, setController] = useState(false);
-    function Controller(){
-        setController(!controller);
+  const [navController, setNavController] = useState('optionHidden');
+  const [controller, setController] = useState(false);
+  function Controller() {
+    setController(!controller);
 
-        if(controller === false){
-            setNavController('optionDisplay');
-          
-        }
-        if(controller === true){
-            setNavController('optionHidden');
-          
-        }
+    if (controller === false) {
+      setNavController('optionDisplay');
+
     }
-    return(
-<div className="App">
+    if (controller === true) {
+      setNavController('optionHidden');
+
+    }
+  }
+  return (
+    <div className="App">
       {/*--------------------------- navigation section----------------------------------------  */}
       <nav className='wideScreen'>
         <img className="logo" src={naziem} alt="organisation logo" />
@@ -45,23 +45,23 @@ export default function InitialComponent(){
       </nav>
       <nav className='smallScreen'>
         <section>
-            <img className="logo" src={naziem} alt="organisation logo" />
-            <button onClick={()=>Controller()}>
-                <img src={burgerMenu}/>
-            </button>
+          <img className="logo" src={naziem} alt="organisation logo" />
+          <button onClick={() => Controller()}>
+            <img src={burgerMenu} />
+          </button>
         </section>
 
-      <div className={navController}>
-        <ul>
+        <div className={navController}>
+          <ul>
             <li><a href='#home'>Home</a></li>
             <li><a href='#portfolio'> Portfolio</a></li>
             <li><a href='#about'>About</a></li>
             <li><a href='#contact'>Contact</a></li>
-        </ul>
-      </div>
+          </ul>
+        </div>
       </nav>
-      
-    
+
+
       {/* ----------------------------- End Navigation section -------------------------- */}
 
       {/*----------------------------- Banner Section ------------------------------------- */}
@@ -81,26 +81,20 @@ export default function InitialComponent(){
         </section>
         <section className="content">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Integer magna dolor, semper quis lectus ut, imperdiet bibendum risus. 
-            Cras a rutrum nulla. Pellentesque lobortis feugiat ante. Phasellus 
-            laoreet neque tortor, quis consequat purus interdum at. Donec suscipit, 
-            diam a elementum congue, tortor justo bibendum est, 
-            ut feugiat arcu velit vel tortor. Donec ac tortor quis lectus 
-            laoreet aliquet ac id orci. Aliquam hendrerit ligula nisl, quis 
-            elementum leo condimentum id.
+            Naziem's photography, is a service provided by Naziem, and partners. His services include
+            photo shoots at events, studio's, graduations and celebrations. Anything you're looking for, we got you!
           </p>
         </section>
-        
-        
+
+
 
       </section>
       {/* --------------------------------End About Section------------------------------------- */}
 
       {/* ---------------------------------Breaker Section------------------------------------------- */}
       <section className="breaker">
-        <img src={wedding} 
-    className="wedding" alt="wedding imager"/>
+        <img src={wedding}
+          className="wedding" alt="wedding imager" />
         <section className="areas">
           <h4>Where You Will Find Us....</h4>
           <ul>
@@ -110,10 +104,10 @@ export default function InitialComponent(){
           </ul>
           <section>
             <li className="portfolioBtn">
-            <a href="#portfolio">Portfolio</a>
-          </li>
+              <a href="#portfolio">Portfolio</a>
+            </li>
           </section>
-          
+
         </section>
       </section>
       {/* --------------------End Breaker------------------------------------------------------- */}
@@ -121,7 +115,7 @@ export default function InitialComponent(){
       {/* -------------------------------------Portfolio Section--------------------------------- */}
       <section id="portfolio" className="portfolio">
         <section className="wedding">
-        <li className="portfolioBtn">
+          <li className="portfolioBtn">
             <Link to="/wedding">Portfolio</Link>
           </li>
         </section>
@@ -143,17 +137,17 @@ export default function InitialComponent(){
         <section className="form">
           <form>
             <h4>Get In Touch With Us</h4>
-            <input className="textInput" name="username" type="text" placeholder="Enter Your Name"/><br/>
-            <input className="textInput" name="email" type="email" placeholder="email"/><br/>
-            <input className="textInput" name="subject" type="text" placeholder="Subject"/><br/>
+            <input className="textInput" name="username" type="text" placeholder="Enter Your Name" /><br />
+            <input className="textInput" name="email" type="email" placeholder="email" /><br />
+            <input className="textInput" name="subject" type="text" placeholder="Subject" /><br />
             <textarea>
 
             </textarea>
-              <button> Submit</button>
+            <button> Submit</button>
           </form>
 
         </section>
-        
+
         <section className="details">
           <h6> Contact: +27 72 312 7077</h6>
           <h6> Email: naziemphotography@example.com</h6>
@@ -161,17 +155,17 @@ export default function InitialComponent(){
             <ul>
               <li>
                 <a>
-                  <img  className="socialFacebook" src={facebook} alt="facebook logo"/>
+                  <img className="socialFacebook" src={facebook} alt="facebook logo" />
                 </a>
               </li>
               <li>
                 <a>
-                  <img className="socialInstagram" src={instagram} alt="instagram logo"/>
+                  <img className="socialInstagram" src={instagram} alt="instagram logo" />
                 </a>
               </li>
-              
+
             </ul>
-            
+
           </section>
         </section>
       </section>
@@ -179,7 +173,7 @@ export default function InitialComponent(){
       <footer>
         <h5>Designed and maintained by Phronesis. All rights reserved.</h5>
       </footer>
-      
+
     </div>
-    );
+  );
 }
